@@ -9,8 +9,8 @@ import { map } from 'rxjs/operators';
 export class ProfileService {
 
   private username: string;
-  private clientId = environment.githubClientID;
-  private clientSecret = environment.githubClientsecret;
+  private clientId = 'Iv1.25c0be755228cbfe';
+  private clientSecret = '256d7b01386a6fc185d5af1d1365bc40c01fa599';
 
   constructor(private http:HttpClient) {
     console.log("Service works");
