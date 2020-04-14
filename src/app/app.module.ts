@@ -8,16 +8,13 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DatePipe } from './date.pipe';
 import { ProfileService } from './profile.service';
-import { NavbarComponent } from './navbar/navbar.component';
-import { ProfileFormComponent } from './profile-form/profile-form.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    DatePipe,
-    NavbarComponent,
-    ProfileFormComponent
+    DatePipe
   ],
   imports: [
     BrowserModule,

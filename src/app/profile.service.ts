@@ -26,4 +26,7 @@ export class ProfileService {
     + "&client_secret" + this.clientSecret).pipe(
       map(response => response))
    }
+   updateProfile(visitorUsername: string){
+    this.username = visitorUsername;
+   }
 }

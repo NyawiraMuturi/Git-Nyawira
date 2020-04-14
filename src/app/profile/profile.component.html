@@ -1,5 +1,6 @@
-<app-navbar></app-navbar>
+
 <div *ngIf="profile" class="container-fluid">
+    <app-profile-form></app-profile-form>
     <div class="panel panel-default">
         <div class="panel-heading">
             {{profile.name}} <strong>{{profile.login}}</strong>
