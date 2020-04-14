@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DatePipe } from './date.pipe';
 import { ProfileService } from './profile.service';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
-    DatePipe
+    DatePipe,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
