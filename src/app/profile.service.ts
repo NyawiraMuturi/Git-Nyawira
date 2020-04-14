@@ -21,5 +21,9 @@ export class ProfileService {
     + "&client_secret" + this.clientSecret).pipe(
       map(response => response))
    }
-
+   getProfileRepos() {
+    return this.http.get<any>("https://api.github.com/users/" + this.username + "/repos?client_id" + this.clientId
+    + "&client_secret" + this.clientSecret).pipe(
+      map(response => response))
+   }
 }
