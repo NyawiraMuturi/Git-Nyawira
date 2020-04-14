@@ -1,4 +1,10 @@
-<div *ngIf="profile">
+<form action="" class="container">
+    <div class="form-group">
+        <input type="text" class="form-control" name="search" placeholder="search">
+    </div>
+</form>
+
+<div *ngIf="profile" class="container-fluid">
     <div class="panel panel-default">
         <div class="panel-heading">
             {{profile.name}} <strong>{{profile.login}}</strong>
@@ -10,8 +16,8 @@
                 </div>
                 <div class="col-sm-5">
                     <ul class="list-group">
-                        <li class="list-group-item" *ngIf='profile.bio'>{{profile.bio}}</li>
-                        <li class="list-group-item" *ngIf='profile.hireable'>Available for hire</li>
+                        <li class="list-group-item" *ngIf='profile.bio'><h5><strong>Bio:</strong></h5>{{profile.bio}}</li>
+                        <li class="list-group-item" *ngIf='profile.hireable'><h5><strong>Status:</strong></h5>Available for hire</li>
                         <li class="list-group-item" *ngIf='profile.blog'><a href="{{profile.blog}}"
                                 target="_blank">{{profile.blog}}</a></li>
                         <li class="list-group-item" *ngIf='profile.email'><a
@@ -25,13 +31,15 @@
                             <button type="button" class="btn btn-info"><span class="label label-success">{{ profile.following }} Following </span></button>
                             <button type="button" class="btn btn-danger"><span class="label label-success">{{ profile.public_repos }} Repositories </span></button>
                         </p>
-                        <p><button type="button" class="btn btn-light"><a href="{{profile.html_url}}"> View Profile on Github</a></button></p>
+                        <p><button type="button" class="btn btn-light"><a href="{{profile.html_url}}" target="_blank"> View Profile on Github</a></button></p>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h3 class="panel-title">Repositories</h3>
                             </div>
-                            <div class="panel-body" *ngfor="let repo of repos">
-
+                            <div class="panel-body" *ngFor="let repo of repos">
+                                <p>
+                                    {{ repo.name }} <a class="btn btn-outline-primary btn-sm" href="{{repo.html_url}}" target="_blank" role="button">View Repository</a>
+                                </p>
                             </div>
                         </div>
                     </div>
